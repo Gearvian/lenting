@@ -1,4 +1,5 @@
 Def f :
+
 print
 
 print
