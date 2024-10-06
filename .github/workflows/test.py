@@ -1,0 +1,2 @@
+Def f :
+print
