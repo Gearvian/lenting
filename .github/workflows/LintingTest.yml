@@ -8,11 +8,11 @@ on:
 jobs:
   run-linters:
     name: Run linters
-    runs-on: ubuntu-latest
+    uses: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
       - name: Check out Git repository
-        uses: actions/checkout@v4
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
