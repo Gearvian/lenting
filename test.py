@@ -1,9 +1,2 @@
-Def f :
-
-print
-
-print
-
-print
-
-print
+def test():
+    print("ysducgj")
