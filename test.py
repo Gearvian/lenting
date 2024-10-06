@@ -1,2 +1,3 @@
 Def f :
 print
+print
