@@ -14,8 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
       - name: Check out Git repository
-        uses: actions/checkout@v4
+        uses: github/susper-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
