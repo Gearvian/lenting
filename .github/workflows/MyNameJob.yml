@@ -9,11 +9,12 @@ env:
 jobs:
   Fname:
     runs-on: ubuntu-latest
+    outputs:
+      FIRST_NAME: ${{ steps.first_name.outputs.FIRST_NAME }}
     steps:
       - name: "First Name"
-        run: echo "My Name is $FIRST_NAME."
-        env:
-          FIRST_NAME: Ahmed  
+        id: first_name
+        run: echo "FIRST_NAME=Ahmed" >> $GITHUB_ENV
 
   LName:
     runs-on: ubuntu-latest
