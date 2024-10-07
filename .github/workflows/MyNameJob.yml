@@ -21,7 +21,7 @@ jobs:
     needs: Fname
     steps:
       - name: "Last Name"
-        run: echo "My Name is $FIRST_NAME $LAST_NAME"
         env:
-          FIRST_NAME: ${{ needs.Fname.outputs.FIRST_NAME }}
+          FIRST_NAME: ${{ needs.first_name.outputs.FIRST_NAME }}
           LAST_NAME: AlRasheed
+        run: echo "My Name is $FIRST_NAME $LAST_NAME"
