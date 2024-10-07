@@ -1,7 +1,9 @@
 name: BranchName
 
-on: 
-  push: 
+on:
+  push:
+    branches:
+      - main
 
 jobs: 
   BranchJob: 
