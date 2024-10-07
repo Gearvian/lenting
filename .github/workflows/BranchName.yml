@@ -2,7 +2,7 @@ name: BranchName
 
 on:
   push:
-
+  - main
 jobs: 
   BranchJob: 
     runs-on: ubuntu-latest
