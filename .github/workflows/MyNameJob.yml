@@ -4,23 +4,23 @@ on:
   push:
 
 env:
-  My_NAME: Default  
+  MY_NAME: Default  
 
 jobs:
   Fname:
     runs-on: ubuntu-latest
     steps:
       - name: "First Name"
-        run: echo "My Name is $First_Name."
+        run: echo "My Name is $FIRST_NAME."
         env:
-          First_Name: Ahmed  
+          FIRST_NAME: Ahmed  
 
   LName:
     runs-on: ubuntu-latest
+    needs: Fname
     steps:
       - name: "Last Name"
-        run: echo "My Name is $First_Name $Last_Name"
-        needs: Fname
+        run: echo "My Name is $FIRST_NAME $LAST_NAME"
         env:
-          First_Name: ${{ needs.Fname.env.First_Name }}
-          Last_Name: AlRasheed  
+          FIRST_NAME: ${{ needs.Fname.outputs.FIRST_NAME }}
+          LAST_NAME: AlRasheed
