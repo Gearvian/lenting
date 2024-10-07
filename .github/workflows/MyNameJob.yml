@@ -1,0 +1,26 @@
+name: MyNameJob
+
+on:
+  push:
+
+env:
+  My_NAME: Default  
+
+jobs:
+  Fname:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "First Name"
+        run: echo "My Name is $First_Name."
+        env:
+          First_Name: Ahmed  
+
+  LName:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Last Name"
+        run: echo "My Name is $First_Name $Last_Name"
+        needs: Fname
+        env:
+          First_Name: ${{ needs.Fname.env.First_Name }}
+          Last_Name: AlRasheed  
