@@ -4,22 +4,21 @@ on:
   push:
 
 env:
-  JobName: Job
+  JOB_NAME: Job  
 
 jobs:
-  JobName:
+  Job1:
     runs-on: ubuntu-latest
     steps:
       - name: "Job1 Name"
-        run: echo "This is $JobName."
+        run: echo "This is $JOB_NAME."
         env:
-          JobName: Job 1
+          JOB_NAME: Job 1  
 
-jobs:
-  JobName:
+  Job2:
     runs-on: ubuntu-latest
     steps:
       - name: "Job2 Name"
-        run: echo "This is $JobName."
+        run: echo "This is $JOB_NAME."
         env:
-          JobName: Job 2
+          JOB_NAME: Job 2  
