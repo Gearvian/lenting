@@ -9,5 +9,5 @@ jobs:
   BranchJob: 
     runs-on: ubuntu-latest
     steps:
-      - name: Print Branch Name
+      - name: Print Branch Namee
         run: echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
