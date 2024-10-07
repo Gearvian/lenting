@@ -1,0 +1,25 @@
+name: JobName
+
+on:
+  push:
+
+env:
+  JobName: Job
+
+jobs:
+  JobName:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Job1 Name"
+        run: echo "This is $JobName."
+        env:
+          JobName: Job 1
+
+jobs:
+  JobName:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Job2 Name"
+        run: echo "This is $JobName."
+        env:
+          JobName: Job 2
