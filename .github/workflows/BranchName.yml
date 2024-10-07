@@ -7,6 +7,7 @@ on:
 
 jobs: 
   BranchJob: 
-  name: Branch Job 
-  id: branchname
-  run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Branch Name
+        run: echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
